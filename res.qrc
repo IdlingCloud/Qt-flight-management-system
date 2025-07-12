@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/plane.svg</file>
+        <file>res/plane_w.svg</file>
+        <file>res/swap.svg</file>
+        <file>res/up.svg</file>
+        <file>res/down.svg</file>
+        <file>res/arrow_right.svg</file>
+    </qresource>
+</RCC>
