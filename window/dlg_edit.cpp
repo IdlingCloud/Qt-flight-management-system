@@ -37,6 +37,13 @@ void PasswordEdit::on_pushButton_regist_clicked()
     // 如果验证通过，更新密码
     if (updatePassword(newPassword)) {
         ui->lbl_check->setText("修改成功！");
+        // 使用定时器隐藏提示信息
+        QTimer *timer = new QTimer(this);
+        timer->setSingleShot(true);  // 设置为单次触发
+
+        connect(timer, &QTimer::timeout, this, &PasswordEdit::hide);
+
+        timer->start(1000);  // 1秒后隐藏
     } else {
         ui->lbl_check->setText("修改失败，请重试！");
     }
